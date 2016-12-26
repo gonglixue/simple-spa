@@ -1,12 +1,9 @@
 module.exports = {
-    '/':{
-        component: require('./components/index')
-    },
-    '/list':{
-        component: require('./components/list')
-    },
-    '*':{
-        component: require('./components/notFound')
-    }
+   routes:[
+       {path:'/', component:require('./components/index')},
+       {path:'/list', component:require('./components/list')},
+       {path:'*',component:require('./components/notFound')}
+
+   ]
 
 }
