@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-	devtool: 'source-map',
+	devtool: 'eval',
 	entry:{
 		bundle:['./src/app.js']
 	},
@@ -16,7 +16,11 @@ module.exports = {
 			{ test: /\.js$/, loaders:['babel'], exclude:/node_modules/}
 		]
 	},
-	resolve:{},
+	resolve:{
+		alias:{
+			'vue$': 'vue/dist/vue.common.js'
+		}
+	},
 	plugins:[
 	/*
 		new webpack.optimize.UglifyJsPlugin({
