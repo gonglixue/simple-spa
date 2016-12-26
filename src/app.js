@@ -6,9 +6,12 @@ Vue.config.debug = true;
 Vue.config.delimiters = ['${','}']; //把默认的{{}}改成ES6的模板字符串${}
 Vue.config.devtools = true;
 
-var App = Vue.extend({});
-var router = new VueRouter({});
 
-router.map(require('./routes'));
-router.start(App, '#app');
+var router = new VueRouter(require('./routes'));
+var App = new Vue({
+    el:'#app',
+    router:router
+})
+//router.map(require('./routes'));
+//router.start(App, '#app');
 router.go({"path":"/"})

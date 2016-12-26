@@ -8436,10 +8436,10 @@
 	        component: __webpack_require__(6)
 	    },
 	    '/list': {
-	        component: __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/list\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
+	        component: __webpack_require__(8)
 	    },
 	    '*': {
-	        component: __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/notFound\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
+	        component: __webpack_require__(9)
 	    }
 
 	};
@@ -8461,6 +8461,22 @@
 /***/ function(module, exports) {
 
 	module.exports = "<h1>Index</h1>\r\n<p>Hello World Index!</p>";
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	/**
+	 * Created by chenjun on 2016/12/26.
+	 */
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	/**
+	 * Created by chenjun on 2016/12/26.
+	 */
 
 /***/ }
 /******/ ]);
