@@ -80,7 +80,7 @@
 /* 6 */
 /***/ function(module, exports) {
 
-	eval("module.exports = \"<h1>Index</h1>\\r\\n<p>Hello World Index!</p>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/index.html\n// module id = 6\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/index.html?");
+	eval("module.exports = \"<html>\\r\\n<h1>Index</h1>\\r\\n<p>Hello World Index!</p>\\r\\n</html>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/index.html\n// module id = 6\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/index.html?");
 
 /***/ },
 /* 7 */
