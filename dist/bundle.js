@@ -8434,15 +8434,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	    '/': {
-	        component: __webpack_require__(6)
-	    },
-	    '/list': {
-	        component: __webpack_require__(8)
-	    },
-	    '*': {
-	        component: __webpack_require__(9)
-	    }
+	   routes: [{ path: '/', component: __webpack_require__(6) }, { path: '/list', component: __webpack_require__(8) }, { path: '*', component: __webpack_require__(9) }]
 
 	};
 
