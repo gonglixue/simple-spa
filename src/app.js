@@ -14,4 +14,4 @@ var App = new Vue({
 })
 //router.map(require('./routes'));
 //router.start(App, '#app');
-router.go({"path":"/"})
+//router.go({"path":"/"})
