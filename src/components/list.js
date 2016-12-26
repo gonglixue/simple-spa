@@ -6,8 +6,8 @@ module.exports={
     data:function(){
         return {
             items:[
-                {"id":1, "name":"hello1"},
-                {"id":2, "name":"hello2"}
+                {id:1, name:"hello1"},
+                {id:2, name:"hello2"}
             ]
         }
     },

@@ -68,7 +68,7 @@
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("module.exports = {\n   routes: [{ path: '/', component: __webpack_require__(5) }, { path: '/list', component: __webpack_require__(7) }, { path: '*', component: __webpack_require__(8) }]\n\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/routes.js\n// module id = 4\n// module chunks = 0\n//# sourceURL=webpack:///./src/routes.js?");
+	eval("module.exports = {\n   routes: [{ path: '/', component: __webpack_require__(5) }, { path: '/list', component: __webpack_require__(7) }, { path: '*', component: __webpack_require__(9) }]\n\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/routes.js\n// module id = 4\n// module chunks = 0\n//# sourceURL=webpack:///./src/routes.js?");
 
 /***/ },
 /* 5 */
@@ -84,15 +84,21 @@
 
 /***/ },
 /* 7 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/list.js\n// module id = 7\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/list.js?");
+	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\nmodule.exports = {\n    template: __webpack_require__(8),\n    data: function () {\n        return {\n            items: [{ id: 1, name: \"hello1\" }, { id: 2, name: \"hello2\" }]\n        };\n    },\n    ready: function () {}\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/list.js\n// module id = 7\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/list.js?");
 
 /***/ },
 /* 8 */
 /***/ function(module, exports) {
 
-	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/notFound.js\n// module id = 8\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/notFound.js?");
+	eval("module.exports = \"<html>\\r\\n<h1>list</h1>\\r\\n<ul>\\r\\n    <li v-for=\\\"(item,index) in items\\\">\\r\\n        {{item.id}}:{{item.name}}\\r\\n    </li>\\r\\n</ul>\\r\\n</html>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/list.html\n// module id = 8\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/list.html?");
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/notFound.js\n// module id = 9\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/notFound.js?");
 
 /***/ }
 /******/ ]);
