@@ -68,7 +68,7 @@
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("module.exports = {\n   routes: [{ path: '/', component: __webpack_require__(5) }, { path: '/list', component: __webpack_require__(7) }, { path: '*', component: __webpack_require__(11) }]\n\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/routes.js\n// module id = 4\n// module chunks = 0\n//# sourceURL=webpack:///./src/routes.js?");
+	eval("module.exports = {\n   routes: [{ path: '/', component: __webpack_require__(5) }, { path: '/list', component: __webpack_require__(7) }, { path: '/show/:id', name: \"show\", component: __webpack_require__(11) }, { path: '*', component: __webpack_require__(13) }]\n\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/routes.js\n// module id = 4\n// module chunks = 0\n//# sourceURL=webpack:///./src/routes.js?");
 
 /***/ },
 /* 5 */
@@ -98,7 +98,7 @@
 /* 9 */
 /***/ function(module, exports) {
 
-	eval("module.exports = \"<p>\\r\\n    我是subitem: {{id}} - {{name}}\\r\\n</p>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/item.html\n// module id = 9\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/item.html?");
+	eval("module.exports = \"<p>\\r\\n    我是subitem: <router-link :to=\\\"{name:'show', params:{'id':id}}\\\">{{id}} - {{name}}</router-link>\\r\\n</p>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/item.html\n// module id = 9\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/item.html?");
 
 /***/ },
 /* 10 */
@@ -108,9 +108,21 @@
 
 /***/ },
 /* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\nmodule.exports = {\n    template: __webpack_require__(12),\n    data: function () {\n        return {};\n    },\n    created: function () {\n        var id = this.$route.params.id;\n        if (id == 1) {\n            //this.data = {\"id\":id, \"name\":\"hellow111\", \"age\":24};\n            this.id = id;\n            this.name = \"hello111\";\n            this.age = 21;\n        } else {\n            //this.data = { \"id\":id, \"name\":\"hello222\",\"age\":28};\n            this.id = id;\n            this.name = \"hello222\";\n            this.age = 28;\n        }\n    },\n    ready: function () {\n        console.log(this.data);\n    }\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/show.js\n// module id = 11\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/show.js?");
+
+/***/ },
+/* 12 */
 /***/ function(module, exports) {
 
-	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/notFound.js\n// module id = 11\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/notFound.js?");
+	eval("module.exports = \"<html>\\r\\n<h1>Show</h1>\\r\\n<p>Hello show page!</p>\\r\\n<p>id:{{id}}</p>\\r\\n<p>name:{{name}}</p>\\r\\n<p>age:{{age}}</p>\\r\\n</html>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/show.html\n// module id = 12\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/show.html?");
+
+/***/ },
+/* 13 */
+/***/ function(module, exports) {
+
+	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/notFound.js\n// module id = 13\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/notFound.js?");
 
 /***/ }
 /******/ ]);
