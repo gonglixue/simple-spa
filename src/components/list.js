@@ -1,7 +1,7 @@
 /**
  * Created by chenjun on 2016/12/26.
  */
-import item from "./item";
+var item = require('./item.js')
 
 module.exports={
     template:require('../templates/list.html'),
