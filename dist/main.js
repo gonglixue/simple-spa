@@ -68,61 +68,73 @@
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("module.exports = {\n   routes: [{ path: '/', component: __webpack_require__(5) }, { path: '/list', component: __webpack_require__(7) }, { path: '/show/:id', name: \"show\", component: __webpack_require__(11) }, { path: '*', component: __webpack_require__(13) }]\n\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/routes.js\n// module id = 4\n// module chunks = 0\n//# sourceURL=webpack:///./src/routes.js?");
+	eval("module.exports = {\n    routes: [{\n        path: '/',\n        component: __webpack_require__(5),\n        children: [{ path: '/tab1', component: __webpack_require__(6) }, { path: '/tab2', component: __webpack_require__(7) }]\n    }, { path: '/list', component: __webpack_require__(9) }, { path: '/show/:id', name: \"show\", component: __webpack_require__(13) }, { path: '*', component: __webpack_require__(15) }]\n\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/routes.js\n// module id = 4\n// module chunks = 0\n//# sourceURL=webpack:///./src/routes.js?");
 
 /***/ },
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\nmodule.exports = {\n    template: __webpack_require__(6),\n    ready: function () {}\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/index.js\n// module id = 5\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/index.js?");
+	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\nvar tab1 = __webpack_require__(6);\nvar tab2 = __webpack_require__(7);\nmodule.exports = {\n    template: __webpack_require__(8),\n    // components:{\n    //     \"tab1\":tab1,\n    //     \"tab2\":tab2\n    // },\n    ready: function () {}\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/index.js\n// module id = 5\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/index.js?");
 
 /***/ },
 /* 6 */
 /***/ function(module, exports) {
 
-	eval("module.exports = \"<html>\\r\\n<h1>Index</h1>\\r\\n<p>Hello World Index!</p>\\r\\n</html>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/index.html\n// module id = 6\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/index.html?");
+	eval("/**\r\n * Created by chenjun on 2016/12/27.\r\n */\nmodule.exports = {\n  template: '<p>Tab1 conetent</p>'\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/tab1.js\n// module id = 6\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/tab1.js?");
 
 /***/ },
 /* 7 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\nvar item = __webpack_require__(8);\n\nmodule.exports = {\n    template: __webpack_require__(10),\n    data: function () {\n        return {\n            items: [{ id: 1, name: \"hello1\" }, { id: 2, name: \"hello2\" }]\n        };\n    },\n    // 定义item组件为子组件\n    components: {\n        \"item\": item\n    },\n    init: function () {\n        console.log('init:在实例开始初始化时同步调用。此时数据观测、事件和watcher都尚未初始化');\n    },\n    created: function () {\n        console.log('created..:在实例创建之后同步调用。此时实例已经结束解析选项，这意味着已建立：数据绑定，计算属性，方法，watcher/事件回调');\n    },\n    beforeCompile: function () {\n        console.log('beforeCompile..：在编译开始前调用');\n    },\n    compiled: function () {\n        console.log('compiled..');\n    },\n\n    ready: function () {\n        console.log('ready');\n    },\n    attached: function () {\n        console.log('attached..');\n    },\n    detached: function () {\n        console.log('detached..');\n    },\n    beforeDestroy: function () {\n        console.log('beforeDestroy');\n    },\n    destroyed: function () {\n        console.log('destroyed..');\n    }\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/list.js\n// module id = 7\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/list.js?");
+	eval("/**\r\n * Created by chenjun on 2016/12/27.\r\n */\nmodule.exports = {\n  template: \"<p>tab2 content</p>\"\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/tab2.js\n// module id = 7\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/tab2.js?");
 
 /***/ },
 /* 8 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\nmodule.exports = {\n\ttemplate: __webpack_require__(9),\n\tprops: [\"id\", \"name\"],\n\tready: function () {\n\t\tconsole.log('item ready');\n\t}\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/item.js\n// module id = 8\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/item.js?");
+	eval("module.exports = \"<html>\\r\\n<h1>Index</h1>\\r\\n<p>Hello World Index!</p>\\r\\n<router-link to=\\\"/tab1\\\">tab1</router-link>\\r\\n<router-link to=\\\"/tab2\\\">tab2</router-link>\\r\\n<router-view></router-view>\\r\\n</html>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/index.html\n// module id = 8\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/index.html?");
 
 /***/ },
 /* 9 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	eval("module.exports = \"<p>\\r\\n    我是subitem: <router-link :to=\\\"{name:'show', params:{'id':id}}\\\">{{id}} - {{name}}</router-link>\\r\\n</p>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/item.html\n// module id = 9\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/item.html?");
+	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\nvar item = __webpack_require__(10);\n\nmodule.exports = {\n    template: __webpack_require__(12),\n    data: function () {\n        return {\n            items: [{ id: 1, name: \"hello1\" }, { id: 2, name: \"hello2\" }]\n        };\n    },\n    // 定义item组件为子组件\n    components: {\n        \"item\": item\n    },\n    init: function () {\n        console.log('init:在实例开始初始化时同步调用。此时数据观测、事件和watcher都尚未初始化');\n    },\n    created: function () {\n        console.log('created..:在实例创建之后同步调用。此时实例已经结束解析选项，这意味着已建立：数据绑定，计算属性，方法，watcher/事件回调');\n    },\n    beforeCompile: function () {\n        console.log('beforeCompile..：在编译开始前调用');\n    },\n    compiled: function () {\n        console.log('compiled..');\n    },\n\n    ready: function () {\n        console.log('ready');\n    },\n    attached: function () {\n        console.log('attached..');\n    },\n    detached: function () {\n        console.log('detached..');\n    },\n    beforeDestroy: function () {\n        console.log('beforeDestroy');\n    },\n    destroyed: function () {\n        console.log('destroyed..');\n    }\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/list.js\n// module id = 9\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/list.js?");
 
 /***/ },
 /* 10 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	eval("module.exports = \"<html>\\r\\n<h1>list</h1>\\r\\n<ul>\\r\\n    <li v-for=\\\"(item,index) in items\\\">\\r\\n        <item v-bind:id=\\\"item.id\\\" v-bind:name=\\\"item.name\\\"></item>\\r\\n    </li>\\r\\n</ul>\\r\\n</html>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/list.html\n// module id = 10\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/list.html?");
+	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\nmodule.exports = {\n\ttemplate: __webpack_require__(11),\n\tprops: [\"id\", \"name\"],\n\tready: function () {\n\t\tconsole.log('item ready');\n\t}\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/item.js\n// module id = 10\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/item.js?");
 
 /***/ },
 /* 11 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\nmodule.exports = {\n    template: __webpack_require__(12),\n    data: function () {\n        return {};\n    },\n    created: function () {\n        var id = this.$route.params.id;\n        if (id == 1) {\n            //this.data = {\"id\":id, \"name\":\"hellow111\", \"age\":24};\n            this.id = id;\n            this.name = \"hello111\";\n            this.age = 21;\n        } else {\n            //this.data = { \"id\":id, \"name\":\"hello222\",\"age\":28};\n            this.id = id;\n            this.name = \"hello222\";\n            this.age = 28;\n        }\n    },\n    ready: function () {\n        console.log(this.data);\n    }\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/show.js\n// module id = 11\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/show.js?");
+	eval("module.exports = \"<p>\\r\\n    我是subitem: <router-link :to=\\\"{name:'show', params:{'id':id}}\\\">{{id}} - {{name}}</router-link>\\r\\n</p>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/item.html\n// module id = 11\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/item.html?");
 
 /***/ },
 /* 12 */
 /***/ function(module, exports) {
 
-	eval("module.exports = \"<html>\\r\\n<h1>Show</h1>\\r\\n<p>Hello show page!</p>\\r\\n<p>id:{{id}}</p>\\r\\n<p>name:{{name}}</p>\\r\\n<p>age:{{age}}</p>\\r\\n</html>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/show.html\n// module id = 12\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/show.html?");
+	eval("module.exports = \"<html>\\r\\n<h1>list</h1>\\r\\n<ul>\\r\\n    <li v-for=\\\"(item,index) in items\\\">\\r\\n        <item v-bind:id=\\\"item.id\\\" v-bind:name=\\\"item.name\\\"></item>\\r\\n    </li>\\r\\n</ul>\\r\\n</html>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/list.html\n// module id = 12\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/list.html?");
 
 /***/ },
 /* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\nmodule.exports = {\n    template: __webpack_require__(14),\n    data: function () {\n        return {};\n    },\n    created: function () {\n        var id = this.$route.params.id;\n        if (id == 1) {\n            //this.data = {\"id\":id, \"name\":\"hellow111\", \"age\":24};\n            this.id = id;\n            this.name = \"hello111\";\n            this.age = 21;\n        } else {\n            //this.data = { \"id\":id, \"name\":\"hello222\",\"age\":28};\n            this.id = id;\n            this.name = \"hello222\";\n            this.age = 28;\n        }\n    },\n    ready: function () {\n        console.log(this.data);\n    }\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/show.js\n// module id = 13\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/show.js?");
+
+/***/ },
+/* 14 */
 /***/ function(module, exports) {
 
-	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/notFound.js\n// module id = 13\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/notFound.js?");
+	eval("module.exports = \"<html>\\r\\n<h1>Show</h1>\\r\\n<p>Hello show page!</p>\\r\\n<p>id:{{id}}</p>\\r\\n<p>name:{{name}}</p>\\r\\n<p>age:{{age}}</p>\\r\\n</html>\";\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/templates/show.html\n// module id = 14\n// module chunks = 0\n//# sourceURL=webpack:///./src/templates/show.html?");
+
+/***/ },
+/* 15 */
+/***/ function(module, exports) {
+
+	eval("/**\r\n * Created by chenjun on 2016/12/26.\r\n */\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/components/notFound.js\n// module id = 15\n// module chunks = 0\n//# sourceURL=webpack:///./src/components/notFound.js?");
 
 /***/ }
 /******/ ]);
