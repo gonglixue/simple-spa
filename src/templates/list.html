@@ -2,7 +2,7 @@
 <h1>list</h1>
 <ul>
     <li v-for="(item,index) in items">
-        {{item.id}}:{{item.name}}
+        <item v-bind:id="item.id" v-bind:name="item.name"></item>
     </li>
 </ul>
 </html>
